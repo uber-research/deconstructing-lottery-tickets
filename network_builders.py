@@ -1,13 +1,23 @@
+# Copyright (c) 2019 Uber Technologies, Inc.
+
+# Licensed under the Uber Non-Commercial License (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at the root directory of this project. 
+
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 from __future__ import print_function
 from __future__ import division
+
 import tensorflow as tf
+
 from tf_plus import Conv2D, MaxPooling2D, Flatten, Dense, relu, Activation
 from tf_plus import Layers, SequentialNetwork, l2reg
 from masked_layers import MaskedDense, MaskedConv2D, FreezeDense, FreezeConv2D
 # use tensorflow's version of keras, or else get version incompatibility errors
 from tensorflow.python import keras as tfkeras
 glorot_normal = tf.keras.initializers.glorot_normal()
-
 
 '''
 Methods to set up network architectures
