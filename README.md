@@ -19,7 +19,7 @@ For more on this project, see the [Uber Eng Blog post](https://eng.uber.com/deco
 
 
 ## Codebase structure
-- `data/download_mnist.py` downloads MNIST data and splits it into train, val, and test
+- `data/download_mnist.py`, `data/download_cifar10.py` downloads MNIST/CIFAR10 data and splits it into train, val, and test, and saves them in the `data` folder as `h5` files
 - `get_weight_init.py` computes various mask criteria
 - `masked_layers.py` defines new layer classes with masking options
 - `masked_networks.py` defines new layers and networks used in training Supermasks
@@ -57,6 +57,6 @@ The following commands provide examples for running experiments in Deconstructin
 - Initialize weights that decreased in magnitude at 0, and freeze pruned weights at initial value: `./print_train_lottery_iterative_command.sh fc test 0 large_final -1 freeze_init_zero_all none t`
 
 #### Supermask experiments
-- Evaluate the initial test accuracy of all alternative mask criteria: `python get_init_loss_train_lottery.py --output_dir ./results/iter_lot_fc_orig/test_seed_0/ --train_h5 ./data/mnist_train --test_h5 ./data/mnist_test --arch fc_lot --seed 0 --opt adam --lr 0.0012 --exp none --layer_cutoff 4,6 --prune_base 0.8,0.9 --prune_power 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24`
+- Evaluate the initial test accuracy of all alternative mask criteria: `python get_init_loss_train_lottery.py --output_dir ./results/iter_lot_fc_orig/test_seed_0/ --train_h5 ./data/mnist_train.h5 --test_h5 ./data/mnist_test.h5 --arch fc_lot --seed 0 --opt adam --lr 0.0012 --exp none --layer_cutoff 4,6 --prune_base 0.8,0.9 --prune_power 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24`
 
-- Train a Supermask directly: `python train_supermask.py --output_dir ./results/iter_lot_fc_orig/learned_supermasks/run1/ --train_h5 ./data/mnist_train --test_h5 ./data/mnist_test --arch fc_mask --opt sgd --lr 100 --num_epochs 2000 --print_every 220 --eval_every 220 --log_every 220 --save_weights --save_every 22000`
+- Train a Supermask directly: `python train_supermask.py --output_dir ./results/iter_lot_fc_orig/learned_supermasks/run1/ --train_h5 ./data/mnist_train.h5 --test_h5 ./data/mnist_test.h5 --arch fc_mask --opt sgd --lr 100 --num_epochs 2000 --print_every 220 --eval_every 220 --log_every 220 --save_weights --save_every 22000`
