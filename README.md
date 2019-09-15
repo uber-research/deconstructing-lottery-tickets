@@ -10,7 +10,7 @@ This codebase implements the experiments in [Deconstructing Lottery Tickets: Zer
 @inproceedings{dtl
   title={Deconstructing Lottery Tickets: Zeros, Signs, and the Supermask},
   author={Zhou, Hattie and Lan, Janice and Liu, Rosanne and Yosinski, Jason},
-  booktitle={Identifying and Understanding Deep Learning Phenomena Workshop, International Conference on Machine Learning},
+  booktitle={Advances in Neural Information Processing Systems},
   year={2019}
 }
 ```
