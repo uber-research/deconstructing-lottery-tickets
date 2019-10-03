@@ -7,7 +7,7 @@ Hattie Zhou, Janice Lan, Rosanne Liu, Jason Yosinski
 This codebase implements the experiments in [Deconstructing Lottery Tickets: Zeros, Signs, and the Supermask](https://arxiv.org/abs/1905.01067). This paper performs various ablation studies to shine light into the Lottery Tickets (LT) phenomenon observed by Frankle & Carbin in [The Lottery Ticket Hypothesis: Finding Small, Trainable Neural Networks](https://arxiv.org/abs/1803.03635).
 
 ```
-@inproceedings{dtl
+@inproceedings{zhou_2019_dlt
   title={Deconstructing Lottery Tickets: Zeros, Signs, and the Supermask},
   author={Zhou, Hattie and Lan, Janice and Liu, Rosanne and Yosinski, Jason},
   booktitle={Advances in Neural Information Processing Systems},
