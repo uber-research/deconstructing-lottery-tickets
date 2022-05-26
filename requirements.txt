@@ -1,6 +1,6 @@
 Keras==2.2.4
 orderedset==2.0.1
-tensorflow-gpu==1.10.0
+tensorflow-gpu==2.7.2
 tensorflow-probability==0.6.0
 numpy==1.16.4
 h5py
